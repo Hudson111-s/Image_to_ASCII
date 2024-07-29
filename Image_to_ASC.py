@@ -5,7 +5,7 @@ import PIL.Image as PILI
 ASCII = ["@", "#", "%", "?", "!", "+", "*", ";", ":", ",", "."]
 
 # Checks every pixel's color value and divides it by 25 to give it the index value for ASCII
-def PtoA(image) -> list:
+def PtoA(image) -> str:
     pixels = image.getdata()
     ASC = "".join(ASCII[p//25] for p in pixels)
     return(ASC)
